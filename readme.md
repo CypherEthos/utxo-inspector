@@ -22,18 +22,17 @@
 SERVER_ADDRESS      = "testnet.nunchuk.io"  # Electrum indexer address or IP
 SERVER_PORT         = 50001                 # Electrum indexer port
 
-TOR_PROXY_ADDRESS	= False					# Tor proxy addresss or IP | False to disable Tor proxy
-TOR_PROXY_PORT		= False					# Tor proxy port | False to disable Tor proxy
+TOR_PROXY_ADDRESS   = False                 # Tor proxy addresss or IP | False to disable Tor proxy
+TOR_PROXY_PORT      = False                 # Tor proxy port | False to disable Tor proxy
 
-TESTNET             = True                  # True to check TESTNET network | False to check MAINNET
-MAX_DEPTH           = 25                    # Max empty addresses to check
-CURRENT_FEE_SATS    = 20                    # Current mempool fee amount in sats   
+TESTNET                 = True              # True to check TESTNET network | False to check MAINNET
+MAX_DEPTH               = 25                # Max empty addresses to check
+CURRENT_FEE_SATS        = 20                # Current mempool fee amount in sats
+SIMPLE_PAYMENT_VBYTES   = 140               # Fee in vbytes for 1 input and 2 outputs
 
 DEATH_UTXO_PERCETAGE    = 100               # UTXO percentage usage in the fee in order to be considered as non-transferable
 BAD_UTXO_PERCETAGE      = 5                 # UTXO percentage usage in the fee in order to be considered as bad to transfer
 REGULAR_UTXO_PERCETAGE  = 1                 # UTXO percentage usage in the fee in order to be considered as neutral to transfer
-
-SIMPLE_PAYMENT_VBYTES   = 140               # Fee in vbytes for 1 input and 2 outputs
 
 CHECK_CHANGE_ADDRESSES  = True              # True to check all addresses | False for NOT checking change addresses
 ```
@@ -52,12 +51,15 @@ Set up your own configuration values on `main.py` file.
 ```
 ¡Connected to testnet.nunchuk.io!
 
-Enter your XPUB: xpub6CUGRUonZSQ4TWtTMmzXdrXDtypWKiKrhko4egpiMZbpiaQL2jkwSB1icqYh2cfDfVxdx4df189oLKnC5fSwqPfgyP3hooxujYzAu3fDVmz
+Enter your XPUB: tpubDCEqoceNVNo5tAeUf5t4Hm5K3ftLbPM9HfoBp9QSKSZ5qYkfhksuDuEDXVHooXnPodAwGfBQK45rwPnQfo7bjJmmMpTHMsxA2mWg8ADhcN6
 
 ## Cheking up to 25 empty receive addresses... ##
-[ bc1q36z7qxr0gjgm3uky0n08qnxh2zuzfh73vmhspx: 1 UTXO(s) ]
-> a64fa7166be163ca0b50cd359a498f369d763e7b180a4f461727862bfd795b2a:1 - 950 sats [ DEATH | 294.74% ]
-[ Total UTXOs: 1 ]
+[ tb1qqajupdvlpzmwgmhe43rd92kjd59khcuu8h8enx: 2 UTXO(s) ]
+> 4738931221205f9352fe44ae43255b9cfaf8c1590e0464e32044daca7efa3aa4:0 - 90000 sats [ REGULAR | 3.11% ]
+> 58bc34a653644856f513d36a173e1ab4d8038e3b5c12a156f938fcdcffe0cb9c:0 - 10000 sats [ BAD | 28.0% ]
+[ tb1qrncf7c6tsvg29s40mklmvsjd9j6shcegc6ycqj: 1 UTXO(s) ]
+> 6f8d142d59798a98125d0c24296ec3a2fe040d9b5091fe9608d075cc81d587fa:0 - 500000 sats [ GOOD | 0.56% ]
+[ Total UTXOs: 3 ]
 ## Finished receiving addresses check ##
 
 ## Cheking up to 25 empty change addresses... ##
