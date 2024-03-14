@@ -83,8 +83,7 @@ if __name__ == '__main__':
 
     printc(colors.BLUE + 'Connecting to node...\n')
 
-    node = Node(config.SERVER_ADDRESS, config.SERVER_PORT)
-    
+    node = Node()    
     if (not node.ping()):
         printc(colors.RED + 'Unable to connect to electrs / fulcrum node. Check address and port. :(\n')
         sys.exit(0)

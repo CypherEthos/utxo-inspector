@@ -2,18 +2,30 @@
 
 ## Requirements
 
-* Electrum indexer node
+* **Electrum indexer** node.
+* **Tor Browser** installed on your computer, if your **Electrum indexer** is under the Tor network.
 
-## Install dependences
+## Dependences
 
-1. `python3 -m pip install cryptos`
+### Install
+
+* `python3 -m pip install cryptos pysocks` 
+
+### Usage
+
+* `cryptos`, to derive public addresses from the xpub.
+* `pysocks`, to connnect to nodes under Tor network.
 
 ## Configuration
 
 ```
-SERVER_ADDRESS      = "testnet.nunchuk.io"  # Electrum indexer IP
+SERVER_ADDRESS      = "testnet.nunchuk.io"  # Electrum indexer address or IP
 SERVER_PORT         = 50001                 # Electrum indexer port
-TESTNET             = True                  # True to check TESTNET netwok | False to check MAINNET
+
+TOR_PROXY_ADDRESS	= False					# Tor proxy addresss or IP | False to disable Tor proxy
+TOR_PROXY_PORT		= False					# Tor proxy port | False to disable Tor proxy
+
+TESTNET             = True                  # True to check TESTNET network | False to check MAINNET
 MAX_DEPTH           = 25                    # Max empty addresses to check
 CURRENT_FEE_SATS    = 20                    # Current mempool fee amount in sats   
 
@@ -38,7 +50,7 @@ Set up your own configuration values on `main.py` file.
 ## Output example
 
 ```
-¡Connected to node!
+¡Connected to testnet.nunchuk.io!
 
 Enter your XPUB: xpub6CUGRUonZSQ4TWtTMmzXdrXDtypWKiKrhko4egpiMZbpiaQL2jkwSB1icqYh2cfDfVxdx4df189oLKnC5fSwqPfgyP3hooxujYzAu3fDVmz
 

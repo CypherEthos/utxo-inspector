@@ -1,6 +1,10 @@
-SERVER_ADDRESS      = "testnet.nunchuk.io"  # Electrum indexer IP
+SERVER_ADDRESS      = "testnet.nunchuk.io"  # Electrum indexer address or IP
 SERVER_PORT         = 50001                 # Electrum indexer port
-TESTNET             = True                  # True to check TESTNET netwok | False to check MAINNET
+
+TOR_PROXY_ADDRESS	= False					# Tor proxy addresss or IP | False to disable Tor proxy
+TOR_PROXY_PORT		= False					# Tor proxy port | False to disable Tor proxy
+
+TESTNET             = True                  # True to check TESTNET network | False to check MAINNET
 MAX_DEPTH           = 25                    # Max empty addresses to check
 CURRENT_FEE_SATS    = 20                    # Current mempool fee amount in sats   
 
